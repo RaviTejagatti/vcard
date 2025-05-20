@@ -24,7 +24,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #252525;
+  color: #00296b;
   line-height: 1.3;
   font-weight: 500; }
 
@@ -41,10 +41,10 @@ a:focus {
   transition-duration: 500ms;
   text-decoration: none;
   outline: 0 solid transparent;
-  color: #252525;
+  color: #00296b;
   font-weight: 500;
   font-size: 14px;
-  color: #252525; }
+  color: #00296b; }
 
 ul,
 ol {
@@ -151,11 +151,11 @@ img {
     height: 30px;
     margin-bottom: 15px;
     display: block;
-    background-color: #8fc5f1; }
+    background-color: #7ebef2; ;; }
   .section-heading h2 {
     margin-bottom: 0;
     font-size: 48px;
-    color: #252525; }
+    color: #00296b; }
     @media only screen and (min-width: 992px) and (max-width: 1199px) {
       .section-heading h2 {
         font-size: 36px; } }
@@ -170,7 +170,7 @@ img {
 
 /* Preloader */
 #preloader {
-  background-color: #8fc5f1;
+  background-color: #7ebef2; ;;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -264,7 +264,7 @@ img {
   padding-right: 0;
   width: 30px;
   height: 30px;
-  background-color: #8fc5f1;
+  background-color: #7ebef2; ;;
   line-height: 30px;
   text-align: center;
   position: absolute;
@@ -279,7 +279,7 @@ textarea:focus {
 
 /* ScrollUp */
 #scrollUp {
-  background-color: #8fc5f1;
+  background-color: #7ebef2; ;;
   border-radius: 0;
   bottom: 60px;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
@@ -314,12 +314,12 @@ textarea:focus {
   -webkit-transition-duration: 500ms;
   transition-duration: 500ms;
   text-transform: capitalize;
-  background-color: #8fc5f1; }
+  background-color: #7ebef2; ;; }
   .vcard-btn.active, .vcard-btn:hover, .vcard-btn:focus {
     font-size: 14px;
     font-weight: 600;
     color: #ffffff;
-    background-color: #252525; }
+    background-color: #00296b; }
   .vcard-btn.contact-btn {
     color: #fff; }
     .vcard-btn.contact-btn:hover, .vcard-btn.contact-btn:focus {
@@ -355,7 +355,7 @@ textarea:focus {
         padding: 10px 15px;
         background-color: transparent;
         line-height: 1;
-        color: #252525;
+        color: #00296b;
         font-weight: 500;
         font-size: 16px;
         position: relative; /* Important for pseudo-element */
@@ -479,13 +479,13 @@ textarea:focus {
       .hero-area .hero-content .contact-info a:last-child {
         margin-bottom: 0; }
       .hero-area .hero-content .contact-info a:hover, .hero-area .hero-content .contact-info a:focus {
-        color: #8fc5f1; }
+        color: #7ebef2; ;; }
     .hero-area .hero-content .social-info a {
       display: inline-block;
       padding-right: 20px;
       font-size: 14px; }
       .hero-area .hero-content .social-info a:hover, .hero-area .hero-content .social-info a:focus {
-        color: #8fc5f1; }
+        color: #7ebef2; ;; }
   .hero-area.horizontal {
     position: relative;
     z-index: 10;
@@ -505,9 +505,9 @@ textarea:focus {
     .hero-area.horizontal .contact-info a {
       color: #828282; }
       .hero-area.horizontal .contact-info a:hover, .hero-area.horizontal .contact-info a:focus {
-        color: #8fc5f1; }
+        color: #7ebef2; ;; }
     .hero-area.horizontal .social-info a {
-      color: #8fc5f1; }
+      color: #7ebef2; ;; }
       .hero-area.horizontal .social-info a:hover, .hero-area.horizontal .social-info a:focus {
         color: #fff; }
 
@@ -567,7 +567,7 @@ textarea:focus {
 .services-area {
   position: relative;
   z-index: 1;
-  background-color: #8fc5f1; }
+  background-color: #7ebef2; ;; }
 
 .single-service-area {
   position: relative;
@@ -583,7 +583,7 @@ textarea:focus {
         .single-service-area .service-title h4 {
           font-size: 18px; } }
   .single-service-area p {
-    color: #252525;
+    color: #00296b;
     margin-bottom: 0; }
 
 /* :: 9.0 Portfolio Area */
@@ -604,7 +604,7 @@ textarea:focus {
   .vcard-projects-menu .portfolio-menu button {
     font-size: 16px;
     padding: 0 20px;
-    color: #252525;
+    color: #00296b;
     background-color: transparent;
     font-weight: 500;
     position: relative;
@@ -618,7 +618,7 @@ textarea:focus {
     .vcard-projects-menu .portfolio-menu button.active::after {
       width: 100%;
       height: 9px;
-      background-color: #8fc5f1;
+      background-color: #7ebef2; ;;
       position: absolute;
       bottom: 0;
       left: 0;
@@ -659,14 +659,14 @@ textarea:focus {
       .single-portfolio-area .portfolio-content .vcard-img-zoom a {
         text-align: center;
         font-size: 24px;
-        color: #8fc5f1;
+        color: #7ebef2; ;;
         display: block;
         -webkit-transition-duration: 500ms;
         transition-duration: 500ms; }
         .single-portfolio-area .portfolio-content .vcard-img-zoom a:hover {
-          color: #252525; }
+          color: #00296b; }
   .single-portfolio-area:hover .portfolio-content h5 {
-    color: #8fc5f1; }
+    color: #7ebef2; ;; }
   .single-portfolio-area:hover .portfolio-content .vcard-img-zoom {
     right: 0; }
 
@@ -676,7 +676,7 @@ textarea:focus {
   z-index: 1;
   margin-left: 40px;
   margin-right: 40px;
-  background-color: #8fc5f1;
+  background-color: #7ebef2; ;;
   padding-left: 5%;
   padding-right: 5%; }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
@@ -795,22 +795,22 @@ textarea:focus {
     transform: scale(1); }
     .testimonial-slides .center .single-testimonial h5 {
       opacity: 1;
-      color: #252525; }
+      color: #00296b; }
     .testimonial-slides .center .single-testimonial p {
       opacity: 1; }
     .testimonial-slides .center .single-testimonial .testimonial-author-info img {
       opacity: 1; }
     .testimonial-slides .center .single-testimonial .testimonial-author-info h6 {
       opacity: 1;
-      color: #252525; }
+      color: #00296b; }
       .testimonial-slides .center .single-testimonial .testimonial-author-info h6 span {
-        color: #8fc5f1;
+        color: #7ebef2; ;;
         opacity: 1; }
   .testimonial-slides .owl-prev,
   .testimonial-slides .owl-next {
     width: 50px;
     height: 50px;
-    background-color: #8fc5f1;
+    background-color: #7ebef2; ;;
     border-radius: 50%;
     text-align: center;
     line-height: 50px;
@@ -826,7 +826,7 @@ textarea:focus {
     visibility: hidden; }
     .testimonial-slides .owl-prev:hover,
     .testimonial-slides .owl-next:hover {
-      background-color: #252525; }
+      background-color: #00296b; }
   .testimonial-slides .owl-next {
     left: auto;
     right: -3%; }
@@ -854,7 +854,7 @@ textarea:focus {
       color: #828282;
       font-size: 12px; }
       .footer-area p a:hover, .footer-area p a:focus {
-        color: #8fc5f1; }
+        color: #7ebef2; ;; }
 
 /* :: 13.0 Contact Area */
 .contact-area {
@@ -893,7 +893,7 @@ textarea:focus {
   transition-duration: 500ms; }
   .contact-form-area .form-control:focus {
     box-shadow: none;
-    border-bottom: 3px solid #8fc5f1; }
+    border-bottom: 3px solid #7ebef2; ;; }
 .contact-form-area textarea.form-control {
   height: 200px;
   padding: 15px 20px;
@@ -905,7 +905,7 @@ textarea:focus {
   position: relative;
   z-index: 1;
   padding-top: 50px;
-  background-color: #8fc5f1;
+  background-color: #7ebef2; ;;
   margin-left: 40px;
   margin-right: 40px;
   margin-top: 50px;
@@ -938,7 +938,7 @@ textarea:focus {
       font-size: 18px; }
     .single-contact-info .contact-text p {
       margin-bottom: 0;
-      color: #252525; }
+      color: #00296b; }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .single-contact-info {
       -webkit-box-flex: 0;
@@ -969,13 +969,13 @@ textarea:focus {
       .view-versions .single-version-area .version-info p {
         margin-bottom: 0;
         text-transform: uppercase;
-        color: #252525;
+        color: #00296b;
         font-weight: 600;
         font-size: 12px; }
     .view-versions .single-version-area:hover, .view-versions .single-version-area:focus {
-      border-color: #8fc5f1; }
+      border-color: #7ebef2; }
       .view-versions .single-version-area:hover .version-info h4, .view-versions .single-version-area:focus .version-info h4 {
-        color: #8fc5f1; }
+        color: #7ebef2; }
 
 /* :: 16.0 Horizontal Version CSS */
 .vcard-main-wrapper {
@@ -1008,7 +1008,7 @@ textarea:focus {
       z-index: 100;
       width: 200px;
       height: calc(100% - 120px);
-      background-color: #8fc5f1;
+      background-color: #7ebef2; ;;
       top: 60px;
       left: 60px; }
       @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1060,7 +1060,7 @@ textarea:focus {
               padding-left: 30px;
               cursor: pointer; }
               .vcard-main-wrapper .vcard-content-wrapper .header_area .logo .nav-toggle:hover, .vcard-main-wrapper .vcard-content-wrapper .header_area .logo .nav-toggle:focus {
-                color: #252525; } }
+                color: #00296b; } }
           @media only screen and (max-width: 767px) {
             .vcard-main-wrapper .vcard-content-wrapper .header_area .logo .nav-toggle {
               -webkit-transition-duration: 500ms;
@@ -1072,7 +1072,7 @@ textarea:focus {
               padding-left: 15px;
               cursor: pointer; }
               .vcard-main-wrapper .vcard-content-wrapper .header_area .logo .nav-toggle:hover, .vcard-main-wrapper .vcard-content-wrapper .header_area .logo .nav-toggle:focus {
-                color: #252525; } }
+                color: #00296b; } }
       .vcard-main-wrapper .vcard-content-wrapper .header_area .vcard-nav {
         position: absolute;
         width: calc(100% - 45px);
@@ -1096,7 +1096,7 @@ textarea:focus {
             top: 0;
             -webkit-transform: translateY(0%);
             transform: translateY(0%);
-            background-color: #8fc5f1;
+            background-color: #7ebef2; ;;
             padding: 30px;
             z-index: 3000; }
             .vcard-main-wrapper .vcard-content-wrapper .header_area .vcard-nav.on {
@@ -1114,7 +1114,7 @@ textarea:focus {
             top: 0;
             -webkit-transform: translateY(0%);
             transform: translateY(0%);
-            background-color: #8fc5f1;
+            background-color: #7ebef2; ;;
             padding: 30px; }
             .vcard-main-wrapper .vcard-content-wrapper .header_area .vcard-nav.on {
               left: 0; } }
@@ -1132,7 +1132,7 @@ textarea:focus {
         .vcard-main-wrapper .vcard-content-wrapper .header_area .vcard-nav li.active a {
           position: relative;
           z-index: 1;
-          color: #252525; }
+          color: #00296b; }
           .vcard-main-wrapper .vcard-content-wrapper .header_area .vcard-nav li.active a::before {
             -webkit-transition-duration: 250ms;
             transition-duration: 250ms;
@@ -1273,7 +1273,7 @@ textarea:focus {
       width: 14px;
       height: 14px;
       border-radius: 50%;
-      border: 2px solid #8fc5f1;
+      border: 2px solid #7ebef2; ;;
       content: '';
       top: 0;
       right: -107px;
@@ -1301,10 +1301,10 @@ textarea:focus {
             right: auto;
             left: -37px; } }
     .work-experience-timeline-wrapper .single-experience-timeline.active::after {
-      background-color: #8fc5f1; }
+      background-color: #7ebef2; ;; }
     .work-experience-timeline-wrapper .single-experience-timeline h5 {
       font-size: 18px;
-      color: #8fc5f1;
+      color: #7ebef2; ;;
       margin-bottom: 4px; }
       @media only screen and (max-width: 767px) {
         .work-experience-timeline-wrapper .single-experience-timeline h5 {
@@ -1375,7 +1375,7 @@ textarea:focus {
       width: 14px;
       height: 14px;
       border-radius: 50%;
-      border: 2px solid #8fc5f1;
+      border: 2px solid #7ebef2; ;;
       content: '';
       top: 0;
       right: -107px;
@@ -1403,10 +1403,10 @@ textarea:focus {
             right: auto;
             left: -37px; } }
     .education-timeline-wrapper .single-education-timeline.active::after {
-      background-color: #8fc5f1; }
+      background-color: #7ebef2; ;; }
     .education-timeline-wrapper .single-education-timeline h5 {
       font-size: 18px;
-      color: #8fc5f1;
+      color: #7ebef2; ;;
       margin-bottom: 4px; }
       @media only screen and (max-width: 767px) {
         .education-timeline-wrapper .single-education-timeline h5 {

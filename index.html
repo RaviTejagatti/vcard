@@ -16,6 +16,7 @@
 
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
 </head>
 <style>
@@ -150,11 +151,252 @@
         height: auto;
     }
 
+    
+
+    /* Style for highlighted logo */
+.logoheader.highlighted {
+    border: 3px solid #FF6347; /* Orange border or any color of your choice */
+    background-color: rgba(255, 99, 71, 0.2); /* Optional background color */
+}
+
+/* Flexbox Layout for side-by-side positioning */
+.row {
+    display: flex;
+    justify-content: space-between; /* Ensures space between the content */
+    align-items: center; /* Vertically aligns both columns in the center */
+}
+
+.hero-content {
+    flex: 1; /* Ensures the text content takes the remaining space */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling the image */
+.hero-image {
+    width: 100%;
+    max-width: 400px; /* You can adjust this to your preference */
+    height: auto;
+    border-radius: 50%; /* Circular shape */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Optional shadow for a floating effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect to make the image scale and get a stronger shadow */
+.hero-image:hover {
+    transform: scale(1.05); /* Slightly increase the size on hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+
+
+
+
 </style>
 
+<style>
+    .spherical-image-container {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        perspective: 1000px;
+    }
+    
+    .spherical-image-wrapper {
+        width: 100%;
+        height: 150%;
+        position: relative;
+        transform-style: preserve-3d;
+    }
+    
+    .spherical-image-wrapper::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        z-index: -1;
+        border-radius: 15px;
+    }
+    
+    .spherical-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        border: 8px solid transparent;
+        border-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%) 1;
+    }
+</style>
+<!-- Additional CSS for smooth transitions -->
+<style>
+    .single-portfolio-area {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .single-portfolio-area:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .portfolio-content {
+        transition: all 0.3s ease;
+    }
+    
+    .single-portfolio-area:hover .portfolio-content {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    /* Ensure smooth image loading */
+    .single-portfolio-area img {
+        transition: opacity 0.5s ease;
+        opacity: 0;
+    }
+    
+    .single-portfolio-area img.loaded {
+        opacity: 1;
+    }
 
 
+    /* Gradient Text */
+.gradient-text {
+    background: linear-gradient(45deg, #FF8C00, #FF6B6B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight:bolder;
+}
 
+/* Modern animation keyframes */
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply smooth entrance */
+.hero-content h2,
+.hero-content h5,
+.contact-info a,
+.social-info a {
+    animation: fadeInSlide 1s ease forwards;
+    opacity: 0;
+}
+
+/* Staggered animations using delays */
+.hero-content h5 {
+    animation-delay: 0.1s;
+}
+
+.hero-content h2 {
+    animation-delay: 0.3s;
+}
+
+.contact-info a {
+    display: block;
+    margin-top: 5px;
+    animation-delay: 0.7s;
+}
+
+.social-info a {
+    margin-right: 10px;
+    animation-delay: 0.9s;
+}
+
+/* Hover effect on social icons */
+.social-info a:hover {
+    color: #FF6B6B;
+    transform: scale(1.1);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+/* Gradient Text */
+.gradient-text {
+    background: linear-gradient(45deg, #084bb7, #00296b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size:xx-large;
+}
+
+.gradient-text_name {
+    
+    background: linear-gradient(45deg, #2a0ec7, #090440);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size:xx-large;
+}
+
+
+/* Entrance Animation */
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content h2,
+.hero-content h5,
+.hero-content p,
+.contact-info a,
+.social-info a {
+    animation: fadeInSlide 1s ease forwards;
+    opacity: 0;
+}
+
+.hero-content h5 {
+    animation-delay: 0.1s;
+}
+
+.hero-content h2 {
+    animation-delay: 0.3s;
+}
+
+.contact-info a {
+    display: block;
+    margin-top: 5px;
+    animation-delay: 0.7s;
+}
+
+.social-info a {
+    margin-right: 10px;
+    animation-delay: 0.9s;
+}
+
+/* Social Icons Hover */
+.social-info a:hover {
+    color: #FF6B6B;
+    transform: scale(1.1);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.hero-content h5, 
+.hero-content h2, 
+.hero-content p {
+    margin: 0;
+    padding: 0;
+}
+
+.hero-content {
+    line-height: 1.2;  /* Adjust line height if needed */
+}
+
+</style>
 
 <body>
     <!-- ##### Preloader ##### -->
@@ -191,24 +433,25 @@
                             <div class="menu-content">
                                 <!-- Navigation menu (right-aligned) -->
                                 <ul id="vcardMenu" class="menu-bar">
-                                    <li class="active"><a href="#about">About</a></li>
-                                    <li class="portfoliuoclass"><a href="#portfolio">Portfolio</a></li>
-                                    <li><a href="#contact">Contact</a></li>
+                                    <li class="active"><a href="#about"></a></li>
+                                    <li class="portfoliuoclass"><a href="#portfolio"></a></li>
+                                    <li><a href="#contact"></a></li>
                                 </ul>
                                 
                                 <!-- Logos (right-aligned) -->
                                 <div class="classynav">
                                     <div class="logo-selection">
                                         <div class="d-flex h-100 gap-8">
-                                            <div class="logoheader" onclick="showInfo('raviteja'); document.querySelector('button[data-filter=\'*\']').click();">
-                                                <img src="img/core-img/test.jpg" alt="Raviteja Gatti">
+                                            <div class="logoheader" onclick="selectLogo('raviteja', this); document.querySelector('button[data-filter=\'*\']').click();">
+                                                <img src="img/bg-img/p11.jpg" alt="Raviteja Gatti">
                                             </div>
-                                            <div class="logoheader" onclick="showInfo('chandu'); document.querySelector('button[data-filter=\'*\']').click();">
-                                                <img src="img/core-img/test1.jpg" alt="Chandu Gatti">
+                                            <div class="logoheader" onclick="selectLogo('chandu', this); document.querySelector('button[data-filter=\'*\']').click();">
+                                                <img src="img/bg-img/r2.jpg" alt="Chandu Gatti">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
                     </nav>
@@ -217,7 +460,7 @@
         </div>
     </header>
     <section id="info-selection" class="innfo-sectio">
-        <div class="hero-area bg-img clearfix" style="background-image: url(img/bg-img/bg121.jpg.webp);" id="about">
+        <div class="hero-area bg-img clearfix" style="background-image: url(img/bg-img/bg121.jpg.jpg);" id="about">
             <div id="floating-spot"></div>
             <div class="container h-100">
 
@@ -225,22 +468,19 @@
 
                 <div class="d-flex justify-content-center align-items-center h-100 gap-8">
 
-                    <h2 class="select-prompt text-center mb-4" style="color: rgb(8, 8, 8); font-weight: 600;">
+                    <h2 class="select-prompt text-center mb-4" style="color:#00296b">
                         Please Select ..
                     </h2>
 
                     <div class="logo" onclick="showInfo('raviteja'); document.querySelector('button[data-filter=\'*\']').click();">
-                        <img src="img/core-img/test.jpg" alt="Raviteja Gatti">
-                        <p>Divyam</p>
+                        <img src="img/bg-img/p11.jpg" alt="Raviteja Gatti">
+                        <p style="color:#00296b">Divyam</p>
                     </div>
                     
-                    <!-- <div class="logo" onclick="showInfo('raviteja')">
-                        <img src="img/core-img/test.jpg" alt="Raviteja Gatti">
-                        <p>Raviteja</p>
-                    </div> -->
+                   
                     <div class="logo" onclick="showInfo('chandu'); document.querySelector('button[data-filter=\'*\']').click();">
-                        <img src="img/core-img/test1.jpg" alt="Chandu Gatti">
-                        <p>Sarvam</p>
+                        <img src="img/bg-img/r2.jpg" alt="Chandu Gatti">
+                        <p style="color:#00296b">Sarvam</p>
                     </div>
                 </div>
 
@@ -250,317 +490,290 @@
 
 
 
-
-
-
-
-
-
-
-
-    <section id="info-raviteja" class="info-section">
-        <div class="hero-area bg-img clearfix" style="background-image: url(img/bg-img/bg121.jpg.webp);" id="about">
-            <div id="floating-spot"></div>
-            <div class="container h-100">
-                <div class="row h-100 align-items-center">
-                    <div class="col-12 col-sm-10 col-md-8">
-                        <!-- Hero Content -->
-                        <div class="hero-content">
-                            <!-- ADD YOUR IMAGE HERE -->
-                            <!-- <img src="img/bg-img/panda-black.webp" alt="Overlay Image" style="width: 500px; height: auto; position: absolute; top: -20px; right: -400px; z-index: 1;"> -->
-
-                            <h5 class="wow fadeInUp" data-wow-delay="100ms">Hello I’m</h5>
-                            <h2 class="wow fadeInUp" data-wow-delay="300ms">Divyam</h2><br>
-                            <a>Age: 2 Years</a><br>
-                            <a>Height: 3’1″ Weight: 30 lbs</a><br>
-                            <a>Hair: Black Eyes: Black</a><br>
-                            <a>Ethnicity: Indian American</a><br>
-                            <a>Clothing Size: 2T – 3T Shoe Size: 6-7</a><br>
-
-                            
-
-                            <!-- Contact Info -->
-                            <div class="contact-info mt-30 wow fadeInUp" data-wow-delay="700ms">
- <a href="#">
-                                Instagram: @divyamjain108</a>
-                                <a href="#"><img src="img/core-img/envelope-small.png.webp" alt="">
-                                    www.sarvamdivyam.com</a>
-
-
-                                     
-                                <a href="#"><img src="img/core-img/phone-call-small.png.webp" alt="">609-613-7893 or 609-592-8799</a>
-                                <a href="#"><img src="img/core-img/monitor-small.png.webp" alt="">
-                                     jainsumith88@gmail.com / apurvakothari04@gmail.com</a>
-                                   
-
-
-
-
-
-                                    <!-- <a class="wow fadeInUp">Smiles big and bright, just like a superstar 🌟</a> -->
-<!-- Loves to pose with lots of energy and fun 💥
-Follows directions like a little champ 💪
-Big, shiny eyes and a smile that makes everyone happy 😊
-Always ready for the camera – a true little performer! 🎥 -->
-                            </div>
-
-                            <!-- Social Info -->
-                            <div class="social-info mt-30 wow fadeInUp" data-wow-delay="900ms">
-                                <a href="#" data-toggle="tooltip" data-placement="top" title="Google Plus"><i
-                                        class="fa fa-google-plus" aria-hidden="true"></i></a>
-                                <a href="#" data-toggle="tooltip" data-placement="top" title="Pinterest"><i
-                                        class="fa fa-pinterest" aria-hidden="true"></i></a>
-                                <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i
-                                        class="fa fa-facebook" aria-hidden="true"></i></a>
-                                <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i
-                                        class="fa fa-twitter" aria-hidden="true"></i></a>
-                            </div>
+<section id="info-raviteja" class="info-section">
+    <div class="hero-area bg-img clearfix" style="background-image: url(img/bg-img/bg121.jpg.jpg);" id="about">
+        <div id="floating-spot"></div>
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-6 col-md-8">
+                    <!-- Hero Content -->
+                    <div class="hero-content">
+                        <h5 class="wow fadeInUp gradient-text" data-wow-delay="100ms" style="font-size: xx-large;"><strong>Hello, I'm</strong></h5>
+                        <h2 class="  wow fadeInUp gradient-text_name" data-wow-delay="300ms" ><strong>Divyam Jain</strong></h2><br>
+                        
+                        <p class="gradient-text"><strong>Age: 2 Years</strong></p>
+                        <p class="gradient-text"><strong>Height: 3'1" </strong></p>
+                        <p class="gradient-text"><strong>Weight: 30 lbs</strong></p>
+                        <p class="gradient-text"><strong>Hair: Black,  Eyes: Black</strong></p>
+                        <p class="gradient-text"><strong>Ethnicity: Indian American</strong></p>
+                        <p class="gradient-text"><strong>Clothing Size: 2T - 3T, Shoe Size: 6-7 </strong></p>
+                    
+                        <!-- Contact Info -->
+                        <!-- <div class="contact-info mt-30">
+                            <a href="#"><strong>Instagram: @divyamjain108</strong></a>
+                            <a href="#"><img src="img/core-img/envelope-small.png.webp" alt=""> <strong>www.sarvamdivyam.com</strong></a>
+                            <a href="#"><img src="img/core-img/phone-call-small.png.webp" alt=""> <strong>609-613-7893 or 609-592-8799</strong></a>
+                            <a href="#"><img src="img/core-img/monitor-small.png.webp" alt=""> <strong>jainsumith88@gmail.com / apurvakothari04@gmail.com</strong></a>
+                        </div> -->
+                    
+                        <!-- Social Info -->
+                        <div class="social-info mt-30">
+                            <a href="#" title="Google Plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                            <a href="#" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                            <a href="#" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="#" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!-- Right side spherical image -->
+                <div class="col-6 col-md-4 d-flex align-items-start justify-content-start">
+                    <div class="spherical-image-container wow fadeIn" data-wow-delay="500ms">
+                        <div class="spherical-image-wrapper">
+                            <img src="img/bg-img/p11.jpg" alt="Divyam Jain" class="img-fluid spherical-image">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</section>
+<section id="info-chandu" class="info-section">
+    <div class="hero-area bg-img clearfix" style="background-image: url(img/bg-img/bg121.jpg.jpg);" id="about">
+        <div id="floating-spot"></div>
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-6 col-sm-10 col-md-8">
+                    <div class="hero-content">
+                        <h5 class="wow fadeInUp gradient-text" data-wow-delay="100ms" style="font-size: xx-large;"><strong>Hello I’m</h5>
+                        <h2 class="  wow fadeInUp gradient-text_name" data-wow-delay="300ms" ><strong>Sarvam Jain</h2><br>
+                        <p class="gradient-text"><strong>Age: 6 Years</strong></p>
+                        <p class="gradient-text"><strong>Height: 4’1</strong></p>
+                        <p class="gradient-text"><strong>  Weight: 40 lbs</strong></p>
+                        <p class="gradient-text"><strong>Hair: Black, Eyes: Black</strong></p>
+                        <p class="gradient-text"><strong>Ethnicity: Indian American</strong></p>
+                        <p class="gradient-text"><strong>Clothing Size: 5T, Shoe Size: 12</strong></p>
 
-    </section>
+                        <!-- Contact Info -->
+                        <!-- <div class="contact-info mt-30 wow fadeInUp" data-wow-delay="700ms">
+                            <a href="#"><strong>Instagram: @sarvamjain</strong></a>
+                            <a href="#"><img src="img/core-img/envelope-small.png.webp" alt=""> <strong>www.sarvamdivyam.com</strong></a>
+                            <a href="#"><img src="img/core-img/phone-call-small.png.webp" alt=""> <strong>609-613-7893 or 609-592-8799</strong></a>
+                            <a href="#"><img src="img/core-img/monitor-small.png.webp" alt=""> <strong>jainsumith88@gmail.com / apurvakothari04@gmail.com</strong></a>
+                        </div> -->
 
-    <section id="info-chandu" class="info-section">
-        <div class="hero-area bg-img clearfix" style="background-image: url(img/bg-img/bg121.jpg.webp);" id="about">
-            <div id="floating-spot"></div>
-            <div class="container h-100">
-                <div class="row h-100 align-items-center">
-                    <div class="col-12 col-sm-10 col-md-8">
-                        <!-- Hero Content -->
-                        <div class="hero-content">
-                            <!-- ADD YOUR IMAGE HERE -->
-                            <!-- <img src="img/bg-img/panda-black.webp" alt="Overlay Image" style="width: 500px; height: auto; position: absolute; top: -20px; right: -400px; z-index: 1;"> -->
+                        <!-- Social Info -->
+                        <div class="social-info mt-30 wow fadeInUp" data-wow-delay="900ms">
+                            <a href="#" title="Google Plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                            <a href="#" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                            <a href="#" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            <a href="#" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
 
-                            <h5 class="wow fadeInUp" data-wow-delay="100ms">Hello I’m</h5>
-                            <h2 class="wow fadeInUp" data-wow-delay="300ms">Sarvam</h2><br>
-                            <a>Age: 6 Years</a><br>
-                            <a>Height: 4’1″, Weight: 40 lbs</a><br>
-                            <a>Hair: Black Eyes: Black</a><br>
-                            <a>Ethnicity: Indian American</a><br>
-                            <a>Clothing Size: 5T Shoe Size: 12</a><br>
-
-
-                            
-
-
-                            <!-- Contact Info -->
-                            <div class="contact-info mt-30 wow fadeInUp" data-wow-delay="700ms">
-                                <div class="contact-info mt-30 wow fadeInUp" data-wow-delay="700ms">
- <a href="#">
-                                Instagram: @sarvamjain</a>
-                                <a href="#"><img src="img/core-img/envelope-small.png.webp" alt="">www.sarvamdivyam.com</a>
-                                <a href="#"><img src="img/core-img/phone-call-small.png.webp" alt="">609-613-7893 or 609-592-8799</a>
-                                <a href="#"><img src="img/core-img/monitor-small.png.webp" alt="">
-                                     jainsumith88@gmail.com / apurvakothari04@gmail.com</a>
-                            </div>
-
-                            <!-- Social Info -->
-                            <div class="social-info mt-30 wow fadeInUp" data-wow-delay="900ms">
-                                <a href="#" data-toggle="tooltip" data-placement="top" title="Google Plus"><i
-                                        class="fa fa-google-plus" aria-hidden="true"></i></a>
-                                <a href="#" data-toggle="tooltip" data-placement="top" title="Pinterest"><i
-                                        class="fa fa-pinterest" aria-hidden="true"></i></a>
-                                <a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><i
-                                        class="fa fa-facebook" aria-hidden="true"></i></a>
-                                <a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><i
-                                        class="fa fa-twitter" aria-hidden="true"></i></a>
-                            </div>
+                <!-- Image Section -->
+                <div class="col-6 col-md-4 d-flex align-items-center justify-content-center">
+                    <div class="spherical-image-container wow fadeIn" data-wow-delay="500ms">
+                        <div class="spherical-image-wrapper">
+                            <img src="img/bg-img/r2.jpg" alt="Sarvam Jain" class="img-fluid spherical-image">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</section>
 
-    </section>
 
 
 
-    <!-- ##### Portfolio Area Start ##### -->
-    <section class="portfolio-area section-padding-100 clearfix" id="portfolio-ravi">
-        <div class="container">
-            <div class="row">
-                <!-- Section Heading -->
-                <div class="col-12">
-                    <div class="section-heading text-center mb-30 wow fadeInUp" data-wow-delay="300ms">
-                        <div class="line mx-auto"></div>
-                        <h2>Portfolio Showcase</h2>
-                    </div>
+<section class="portfolio-area section-padding-100 clearfix" id="portfolio-ravi">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <div class="container">
+        <div class="row">
+            <!-- Section Heading -->
+            <div class="col-12">
+                <div class="section-heading text-center mb-30" data-aos="fade-up" data-aos-delay="300">
+                    <div class="line mx-auto" data-aos="fade-right" data-aos-delay="400"></div>
+                    <h2 class="gradient-text" data-aos="fade-up" data-aos-delay="500">Portfolio Showcase</h2>
                 </div>
+            </div>
 
-                <div class="col-12">
-                    <div class="vcard-projects-menu wow fadeInUp" data-wow-delay="500ms">
-                        <div class="text-center portfolio-menu">
-                            <button class="btn active" style="visibility: hidden;" data-filter="*" >Normal</button>
-                            <button class="btn" style="visibility: hidden;" data-filter=".web">Web Design</button>
-                            <button class="btn" style="visibility: hidden;" data-filter=".brand">Brand Identity</button>
-                             <button class="btn" style="visibility: hidden;" data-filter=".illustrations">Illustrations</button>
-                            <button class="btn" style="visibility: hidden;" data-filter=".motion">Motion Graphics</button>
-                        </div>
+            <div class="col-12">
+                <div class="vcard-projects-menu" data-aos="fade-up" data-aos-delay="500">
+                    <div class="text-center portfolio-menu">
+                        <button class="btn active" style="visibility: hidden;" data-filter="*">Normal</button>
+                        <button class="btn" style="visibility: hidden;" data-filter=".web">Web Design</button>
+                        <button class="btn" style="visibility: hidden;" data-filter=".brand">Brand Identity</button>
+                        <button class="btn" style="visibility: hidden;" data-filter=".illustrations">Illustrations</button>
+                        <button class="btn" style="visibility: hidden;" data-filter=".motion">Motion Graphics</button>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="container-fluid">
-            <div class="row vcard-portfolio">
+    <div class="container-fluid">
+        <div class="row vcard-portfolio">
 
-                <!-- Single gallery Item -->
-                <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area web brand wow fadeInUp"
-                    data-wow-delay="100ms">
-                    <img src="img/bg-img/p1.jpg" alt="">
-                    <!-- Content -->
-                    <div class="portfolio-content">
-                        <h5></h5>
-                        <a href="#" class="catagory"></a>
-                        <!-- Zoom View -->
-                        <div class="vcard-img-zoom">
-                            <a href="img/bg-img/p1.jpg" class="img-url"><i class="fa fa-search-plus"
-                                    aria-hidden="true"></i></a>
-                        </div>
+            <!-- Single gallery Item -->
+            <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area web brand" 
+                 data-aos="fade-up" data-aos-delay="100">
+                <img src="img/bg-img/p1.jpg" alt="">
+                <!-- Content -->
+                <div class="portfolio-content">
+                    <h5></h5>
+                    <a href="#" class="catagory"></a>
+                    <!-- Zoom View -->
+                    <div class="vcard-img-zoom">
+                        <a href="img/bg-img/p1.jpg" class="img-url"><i class="fa fa-search-plus"
+                                aria-hidden="true"></i></a>
                     </div>
                 </div>
-
-                <!-- Single gallery Item -->
-                <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area brand illustrations wow fadeInUp"
-                    data-wow-delay="200ms">
-                    <img src="img/bg-img/p2.jpg" alt="">
-                    <!-- Content -->
-                    <div class="portfolio-content">
-                        <h5></h5>
-                        <a href="#" class="catagory"></a>
-                        <!-- Zoom View -->
-                        <div class="vcard-img-zoom">
-                            <a href="img/bg-img/p2.jpg" class="img-url"></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single gallery Item -->
-                <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area web illustrations wow fadeInUp"
-                    data-wow-delay="300ms">
-                    <img src="img/bg-img/p3.jpg" alt="">
-                    <!-- Content -->
-                    <div class="portfolio-content">
-                        <h5></h5>
-                        <a href="#" class="catagory"></a>
-                        <!-- Zoom View -->
-                        <div class="vcard-img-zoom">
-                            <a href="img/bg-img/p3.jpg" class="img-url"></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single gallery Item -->
-                <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area brand motion wow fadeInUp"
-                    data-wow-delay="400ms">
-                    <img src="img/bg-img/p4.jpg" alt="">
-                    <!-- Content -->
-                    <div class="portfolio-content">
-                        <h5></h5>
-                        <a href="#" class="catagory"></a>
-                        <!-- Zoom View -->
-                        <div class="vcard-img-zoom">
-                            <a href="img/bg-img/p4.jpg" class="img-url"></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single gallery Item -->
-                <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area brand motion wow fadeInUp"
-                    data-wow-delay="500ms">
-                    <img src="img/bg-img/p6.jpg" alt="">
-                    <!-- Content -->
-                    <div class="portfolio-content">
-                        <h5></h5>
-                        <a href="#" class="catagory"></a>
-                        <!-- Zoom View -->
-                        <div class="vcard-img-zoom">
-                            <a href="img/bg-img/p6.jpg" class="img-url"><i class="fa fa-search-plus"
-                                    aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single gallery Item -->
-                <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area web motion wow fadeInUp"
-                    data-wow-delay="600ms">
-                    <img src="img/bg-img/p8.jpg" alt="">
-                    <!-- Content -->
-                    <div class="portfolio-content">
-                        <h5></h5>
-                        <a href="#" class="catagory"></a>
-                        <!-- Zoom View -->
-                        <div class="vcard-img-zoom">
-                            <a href="img/bg-img/p8.jpg" class="img-url"><i class="fa fa-search-plus"
-                                    aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single gallery Item -->
-                <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area illustrations motion wow fadeInUp"
-                    data-wow-delay="700ms">
-                    <img src="img/bg-img/p5.jpg" alt="">
-                    <!-- Content -->
-                    <div class="portfolio-content">
-                        <h5></h5>
-                        <a href="#" class="catagory"></a>
-                        <!-- Zoom View -->
-                        <div class="vcard-img-zoom">
-                            <a href="img/bg-img/p5.jpg" class="img-url"><i class="fa fa-search-plus"
-                                    aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single gallery Item -->
-                <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area illustrations motion wow fadeInUp"
-                    data-wow-delay="800ms">
-                    <img src="img/bg-img/p7.jpg" alt="">
-                    <!-- Content -->
-                    <div class="portfolio-content">
-                        <h5></h5>
-                        <a href="#" class="catagory"></a>
-                        <!-- Zoom View -->
-                        <div class="vcard-img-zoom">
-                            <a href="img/bg-img/p7.jpg" class="img-url"><i class="fa fa-search-plus"
-                                    aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single gallery Item -->
-                <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area web motion wow fadeInUp"
-                    data-wow-delay="900ms">
-                    <img src="img/bg-img/p9.jpg.webp" alt="">
-                    <!-- Content -->
-                    <div class="portfolio-content">
-                        <h5></h5>
-                        <a href="#" class="catagory"></a>
-                        <!-- Zoom View -->
-                        <div class="vcard-img-zoom">
-                            <a href="img/bg-img/p9.jpg.webp" class="img-url"><i class="fa fa-search-plus"
-                                    aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
 
-            
+            <!-- Single gallery Item -->
+            <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area brand illustrations" 
+                 data-aos="fade-up" data-aos-delay="200">
+                <img src="img/bg-img/p2.jpg" alt="">
+                <!-- Content -->
+                <div class="portfolio-content">
+                    <h5></h5>
+                    <a href="#" class="catagory"></a>
+                    <!-- Zoom View -->
+                    <div class="vcard-img-zoom">
+                        <a href="img/bg-img/p2.jpg" class="img-url"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single gallery Item -->
+            <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area web illustrations" 
+                 data-aos="fade-up" data-aos-delay="300">
+                <img src="img/bg-img/p3.jpg" alt="">
+                <!-- Content -->
+                <div class="portfolio-content">
+                    <h5></h5>
+                    <a href="#" class="catagory"></a>
+                    <!-- Zoom View -->
+                    <div class="vcard-img-zoom">
+                        <a href="img/bg-img/p3.jpg" class="img-url"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single gallery Item -->
+            <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area brand motion" 
+                 data-aos="fade-up" data-aos-delay="400">
+                <img src="img/bg-img/p4.jpg" alt="">
+                <!-- Content -->
+                <div class="portfolio-content">
+                    <h5></h5>
+                    <a href="#" class="catagory"></a>
+                    <!-- Zoom View -->
+                    <div class="vcard-img-zoom">
+                        <a href="img/bg-img/p4.jpg" class="img-url"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single gallery Item -->
+            <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area brand motion" 
+                 data-aos="fade-up" data-aos-delay="500">
+                <img src="img/bg-img/p6.jpg" alt="">
+                <!-- Content -->
+                <div class="portfolio-content">
+                    <h5></h5>
+                    <a href="#" class="catagory"></a>
+                    <!-- Zoom View -->
+                    <div class="vcard-img-zoom">
+                        <a href="img/bg-img/p6.jpg" class="img-url"><i class="fa fa-search-plus"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single gallery Item -->
+            <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area web motion" 
+                 data-aos="fade-up" data-aos-delay="600">
+                <img src="img/bg-img/p8.jpg" alt="">
+                <!-- Content -->
+                <div class="portfolio-content">
+                    <h5></h5>
+                    <a href="#" class="catagory"></a>
+                    <!-- Zoom View -->
+                    <div class="vcard-img-zoom">
+                        <a href="img/bg-img/p8.jpg" class="img-url"><i class="fa fa-search-plus"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single gallery Item -->
+            <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area illustrations motion" 
+                 data-aos="fade-up" data-aos-delay="700">
+                <img src="img/bg-img/p5.jpg" alt="">
+                <!-- Content -->
+                <div class="portfolio-content">
+                    <h5></h5>
+                    <a href="#" class="catagory"></a>
+                    <!-- Zoom View -->
+                    <div class="vcard-img-zoom">
+                        <a href="img/bg-img/p5.jpg" class="img-url"><i class="fa fa-search-plus"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single gallery Item -->
+            <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area illustrations motion" 
+                 data-aos="fade-up" data-aos-delay="800">
+                <img src="img/bg-img/p7.jpg" alt="">
+                <!-- Content -->
+                <div class="portfolio-content">
+                    <h5></h5>
+                    <a href="#" class="catagory"></a>
+                    <!-- Zoom View -->
+                    <div class="vcard-img-zoom">
+                        <a href="img/bg-img/p7.jpg" class="img-url"><i class="fa fa-search-plus"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single gallery Item -->
+            <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area web motion" 
+                 data-aos="fade-up" data-aos-delay="900">
+                <img src="img/bg-img/p9.jpg.webp" alt="">
+                <!-- Content -->
+                <div class="portfolio-content">
+                    <h5></h5>
+                    <a href="#" class="catagory"></a>
+                    <!-- Zoom View -->
+                    <div class="vcard-img-zoom">
+                        <a href="img/bg-img/p9.jpg.webp" class="img-url"><i class="fa fa-search-plus"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
     <section class="portfolio-area section-padding-100 clearfix" id="portfolio-chandu">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
         <div class="container">
             <div class="row">
                 <!-- Section Heading -->
                 <div class="col-12">
                     <div class="section-heading text-center mb-30 wow fadeInUp" data-wow-delay="300ms">
                         <div class="line mx-auto"></div>
-                        <h2>Portfolio Showcase</h2>
+                        <h2 class="gradient-text">Portfolio Showcase</h2>
                     </div>
                 </div>
 
@@ -583,7 +796,7 @@ Always ready for the camera – a true little performer! 🎥 -->
 
                 <!-- Single gallery Item -->
                 <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area web brand wow fadeInUp"
-                    data-wow-delay="100ms">
+                      data-aos="fade-up" data-aos-delay="100">
                     <img src="img/bg-img/r1.jpg" alt="">
                     <!-- Content -->
                     <div class="portfolio-content">
@@ -599,7 +812,7 @@ Always ready for the camera – a true little performer! 🎥 -->
 
                 <!-- Single gallery Item -->
                 <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area brand illustrations wow fadeInUp"
-                    data-wow-delay="200ms">
+                      data-aos="fade-up" data-aos-delay="100">
                     <img src="img/bg-img/r2.jpg" alt="">
                     <!-- Content -->
                     <div class="portfolio-content">
@@ -615,7 +828,7 @@ Always ready for the camera – a true little performer! 🎥 -->
 
                 <!-- Single gallery Item -->
                 <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area web illustrations wow fadeInUp"
-                    data-wow-delay="300ms">
+                      data-aos="fade-up" data-aos-delay="100">
                     <img src="img/bg-img/r3.jpg" alt="">
                     <!-- Content -->
                     <div class="portfolio-content">
@@ -631,7 +844,7 @@ Always ready for the camera – a true little performer! 🎥 -->
 
                 <!-- Single gallery Item -->
                 <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area brand motion wow fadeInUp"
-                    data-wow-delay="400ms">
+                      data-aos="fade-up" data-aos-delay="100">
                     <img src="img/bg-img/r4.jpg" alt="">
                     <!-- Content -->
                     <div class="portfolio-content">
@@ -647,7 +860,7 @@ Always ready for the camera – a true little performer! 🎥 -->
 
                 <!-- Single gallery Item -->
                 <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area brand motion wow fadeInUp"
-                    data-wow-delay="500ms">
+                      data-aos="fade-up" data-aos-delay="100">
                     <img src="img/bg-img/r5.webp" alt="">
                     <!-- Content -->
                     <div class="portfolio-content">
@@ -663,7 +876,7 @@ Always ready for the camera – a true little performer! 🎥 -->
 
                 <!-- Single gallery Item -->
                 <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area web motion wow fadeInUp"
-                    data-wow-delay="600ms">
+                      data-aos="fade-up" data-aos-delay="100">
                     <img src="img/bg-img/r6.webp" alt="">
                     <!-- Content -->
                     <div class="portfolio-content">
@@ -679,7 +892,7 @@ Always ready for the camera – a true little performer! 🎥 -->
 
                 <!-- Single gallery Item -->
                 <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area illustrations motion wow fadeInUp"
-                    data-wow-delay="700ms">
+                      data-aos="fade-up" data-aos-delay="100">
                     <img src="img/bg-img/r7.webp" alt="">
                     <!-- Content -->
                     <div class="portfolio-content">
@@ -730,55 +943,7 @@ Always ready for the camera – a true little performer! 🎥 -->
     </section>
 
 
-    <!-- ##### Contact Area Start ##### -->
-    <div class="contact-area" id="contact">
-        <div class="container-fluid">
-            <div class="row">
-
-                <!-- Contact Form Area -->
-                <div class="col-12 col-md-6">
-                    <div class="contact-area">
-
-                        <div class="section-heading wow fadeInUp" data-wow-delay="300ms">
-                            <div class="line"></div>
-                            <h2>Get in touch</h2>
-                        </div>
-
-                        <div class="contact-form-area wow fadeInUp" data-wow-delay="500ms">
-                            <form action="#" method="post">
-                                <div class="row">
-                                    <div class="col-12 col-lg-6">
-                                        <input type="text" class="form-control" id="name" placeholder="Name">
-                                    </div>
-                                    <div class="col-12 col-lg-6">
-                                        <input type="email" class="form-control" id="email" placeholder="E-mail">
-                                    </div>
-                                    <div class="col-12">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                    </div>
-                                    <div class="col-12">
-                                        <textarea name="message" class="form-control" id="message" cols="30" rows="10"
-                                            placeholder="Message"></textarea>
-                                    </div>
-                                    <div class="col-12">
-                                        <button class="btn vcard-btn mt-15" type="submit">Send Message</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Google Maps -->
-                <div class="col-12 col-md-6">
-                    <div class="testimonial-author-info mt-50">
-                        <img src="img/bg-img/panda-black.webp" alt="">
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <
     <!-- ##### Contact Area End ##### -->
 
     <!-- ##### Contact Information Area Start ##### -->
@@ -791,7 +956,7 @@ Always ready for the camera – a true little performer! 🎥 -->
                         <div class="contact-icon">
                             <img src="img/core-img/placeholder.png.webp" alt="">
                         </div>
-                        <div class="contact-text">
+                        <div class="contact-text gradient-text">
                             <h6>Address:</h6>
                             <p>Princeton, NJ</p>
                         </div>
@@ -799,10 +964,10 @@ Always ready for the camera – a true little performer! 🎥 -->
 
                     <!-- Single Contact Information -->
                     <div class="single-contact-info d-flex align-items-center">
-                        <div class="contact-icon">
+                        <div class="contact-icon ">
                             <img src="img/core-img/phone-call.png.webp" alt="">
                         </div>
-                        <div class="contact-text">
+                        <div class="contact-text gradient-text">
                             <h6>Phone:</h6>
                             <p>609-613-7893 or 609-592-8799</p>
                         </div>
@@ -813,7 +978,7 @@ Always ready for the camera – a true little performer! 🎥 -->
                         <div class="contact-icon">
                             <img src="img/core-img/envelope.png.webp" alt="">
                         </div>
-                        <div class="contact-text">
+                        <div class="contact-text gradient-text" >
                             <h6>Email:</h6>
                             <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
                                     data-cfemail="542d3b212639353d38143339353d387a373b39"> jainsumith88@gmail.com /
@@ -856,7 +1021,51 @@ Always ready for the camera – a true little performer! 🎥 -->
     <script src="js/active.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script>
+</script>
 
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1200,
+        easing: 'ease-in-out',
+        once: true,
+        offset: 180,
+        delay: 200
+    });
+</script>
+
+<script>
+    // Image loading observer
+    document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('.single-portfolio-area img');
+        
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                    }
+                    img.classList.add('loaded');
+                    observer.unobserve(img);
+                }
+            });
+        }, {
+            rootMargin: '200px 0px'
+        });
+        
+        images.forEach(img => {
+            if (!img.complete) {
+                imageObserver.observe(img);
+            } else {
+                img.classList.add('loaded');
+            }
+        });
+    });
+</script>   
     
 <!-- Add this JavaScript -->
 <script>
@@ -925,6 +1134,22 @@ function data() {
             // Optional: Scroll to the content
             document.getElementById(`info-${person}`).scrollIntoView({ behavior: 'smooth' });
         }
+
+
+
+
+function selectLogo(name, element) {
+    // Remove highlight from any previously selected logos
+    const allLogos = document.querySelectorAll('.logoheader');
+    allLogos.forEach(logo => logo.classList.remove('highlighted'));
+
+    // Add the highlight class to the clicked logo
+    element.classList.add('highlighted');
+
+    // Call your existing showInfo function
+    showInfo(name);
+}
+
     </script>
 
 

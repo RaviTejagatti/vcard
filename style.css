@@ -430,7 +430,16 @@ textarea:focus {
       height: 600px; } }
   .hero-area .hero-content {
     position: relative;
-    z-index: 1; }
+    z-index: 1;
+}
+
+/* Apply margin-top only on mobile view (below 768px) */
+@media (max-width: 767px) {
+    .hero-area .hero-content {
+        margin-top: 100px;
+    }
+}
+
     .hero-area .hero-content h5 {
       font-size: 22px;
       font-style: italic;

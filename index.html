@@ -17,6 +17,8 @@
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
 </head>
 <style>
@@ -399,7 +401,7 @@
 </style>
 
 <body>
-    <!-- ##### Preloader ##### -->
+    
     <div id="preloader">
         <div class="loader"></div>
     </div>
@@ -495,28 +497,19 @@
         <div id="floating-spot"></div>
         <div class="container h-100">
             <div class="row h-100 align-items-center">
-                <div class="col-6 col-md-8">
+                <div class="col-12 col-md-6 col-lg-6">
                     <!-- Hero Content -->
                     <div class="hero-content">
                         <h5 class="wow fadeInUp gradient-text" data-wow-delay="100ms" style="font-size: xx-large;"><strong>Hello, I'm</strong></h5>
-                        <h2 class="  wow fadeInUp gradient-text_name" data-wow-delay="300ms" ><strong>Divyam Jain</strong></h2><br>
+                        <h2 class="wow fadeInUp gradient-text_name" data-wow-delay="300ms" ><strong>Divyam Jain</strong></h2><br>
                         
-                        <p class="gradient-text"><strong>Age: 2 Years</strong></p>
-                        <p class="gradient-text"><strong>Height: 3'1" </strong></p>
-                        <p class="gradient-text"><strong>Weight: 30 lbs</strong></p>
-                        <p class="gradient-text"><strong>Hair: Black,  Eyes: Black</strong></p>
-                        <p class="gradient-text"><strong>Ethnicity: Indian American</strong></p>
-                        <p class="gradient-text"><strong>Clothing Size: 2T - 3T, Shoe Size: 6-7 </strong></p>
-                    
-                        <!-- Contact Info -->
-                        <!-- <div class="contact-info mt-30">
-                            <a href="#"><strong>Instagram: @divyamjain108</strong></a>
-                            <a href="#"><img src="img/core-img/envelope-small.png.webp" alt=""> <strong>www.sarvamdivyam.com</strong></a>
-                            <a href="#"><img src="img/core-img/phone-call-small.png.webp" alt=""> <strong>609-613-7893 or 609-592-8799</strong></a>
-                            <a href="#"><img src="img/core-img/monitor-small.png.webp" alt=""> <strong>jainsumith88@gmail.com / apurvakothari04@gmail.com</strong></a>
-                        </div> -->
-                    
-                        <!-- Social Info -->
+                        <a class="wow fadeInUp gradient-text"><strong>Age: 2 Years</strong></a><br>
+                        <a class="wow  fadeInUp gradient-text"><strong>Height: 3'1" </strong></a><br>
+                        <a class="wow fadeInUp gradient-text"><strong>Weight: 30 lbs</strong></a><br>
+                        <a class="wow fadeInUp gradient-text"><strong>Hair: Black,  Eyes: Black</strong></a><br>
+                        <a class="wow fadeInUp gradient-text"><strong>Ethnicity: Indian American</strong></a><br>
+                        <a class="wow fadeInUp gradient-text"><strong>Clothing Size: 2T - 3T</strong></a><br>
+                        <a class="wow fadeInUp gradient-text"><strong>Shoe Size: 6-7 </strong></a>
                         <div class="social-info mt-30">
                             <a href="#" title="Google Plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
                             <a href="#" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
@@ -528,7 +521,7 @@
                 </div>
                 
                 <!-- Right side spherical image -->
-                <div class="col-6 col-md-4 d-flex align-items-start justify-content-start">
+                <div class="col-12 col-md-6 col-lg-6">
                     <div class="spherical-image-container wow fadeIn" data-wow-delay="500ms">
                         <div class="spherical-image-wrapper">
                             <img src="img/bg-img/p11.jpg" alt="Divyam Jain" class="img-fluid spherical-image">
@@ -544,27 +537,19 @@
         <div id="floating-spot"></div>
         <div class="container h-100">
             <div class="row h-100 align-items-center">
-                <div class="col-6 col-sm-10 col-md-8">
+                <div class="col-12 col-md-6 col-lg-6">
                     <div class="hero-content">
                         <h5 class="wow fadeInUp gradient-text" data-wow-delay="100ms" style="font-size: xx-large;"><strong>Hello I’m</h5>
-                        <h2 class="  wow fadeInUp gradient-text_name" data-wow-delay="300ms" ><strong>Sarvam Jain</h2><br>
-                        <p class="gradient-text"><strong>Age: 6 Years</strong></p>
-                        <p class="gradient-text"><strong>Height: 4’1</strong></p>
-                        <p class="gradient-text"><strong>  Weight: 40 lbs</strong></p>
-                        <p class="gradient-text"><strong>Hair: Black, Eyes: Black</strong></p>
-                        <p class="gradient-text"><strong>Ethnicity: Indian American</strong></p>
-                        <p class="gradient-text"><strong>Clothing Size: 5T, Shoe Size: 12</strong></p>
+                        <h2 class="wow fadeInUp gradient-text_name" data-wow-delay="300ms" ><strong>Sarvam Jain</h2><br>
+                        <a class="wow fadeInUp gradient-text"><strong>Age: 6 Years</strong></a><br>
+                        <a class="wow fadeInUp gradient-text"><strong>Height: 4’1</strong></a><br>
+                        <a class="wow fadeInUp gradient-text"><strong>  Weight: 40 lbs</strong></a><br>
+                        <a class="wow fadeInUp gradient-text"><strong>Hair: Black, Eyes: Black</strong></a><br>
+                        <a class="wow fadeInUp gradient-text"><strong>Ethnicity: Indian American</strong></a><br>
+                        <a class="wow fadeInUp gradient-text"><strong>Clothing Size: 5T, Shoe Size: 12</strong></a>
 
-                        <!-- Contact Info -->
-                        <!-- <div class="contact-info mt-30 wow fadeInUp" data-wow-delay="700ms">
-                            <a href="#"><strong>Instagram: @sarvamjain</strong></a>
-                            <a href="#"><img src="img/core-img/envelope-small.png.webp" alt=""> <strong>www.sarvamdivyam.com</strong></a>
-                            <a href="#"><img src="img/core-img/phone-call-small.png.webp" alt=""> <strong>609-613-7893 or 609-592-8799</strong></a>
-                            <a href="#"><img src="img/core-img/monitor-small.png.webp" alt=""> <strong>jainsumith88@gmail.com / apurvakothari04@gmail.com</strong></a>
-                        </div> -->
-
-                        <!-- Social Info -->
-                        <div class="social-info mt-30 wow fadeInUp" data-wow-delay="900ms">
+                       
+                        <div class="social-info mt-30 wow fadeIn" data-wow-delay="500ms">
                             <a href="#" title="Google Plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
                             <a href="#" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
                             <a href="#" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
@@ -573,11 +558,11 @@
                     </div>
                 </div>
 
-                <!-- Image Section -->
-                <div class="col-6 col-md-4 d-flex align-items-center justify-content-center">
+                 <!-- Right side spherical image -->
+                <div class="col-12 col-md-6 col-lg-6">
                     <div class="spherical-image-container wow fadeIn" data-wow-delay="500ms">
                         <div class="spherical-image-wrapper">
-                            <img src="img/bg-img/r2.jpg" alt="Sarvam Jain" class="img-fluid spherical-image">
+                            <img src="img/bg-img/r2.jpg" alt="Divyam Jain" class="img-fluid spherical-image">
                         </div>
                     </div>
                 </div>
@@ -940,10 +925,14 @@
 
             
         </div>
+        <div class="text-center mb-4">
+  <button id="downloadPortfolioBtn" class="btn btn-primary">Download Portfolio</button>
+</div>
+
     </section>
 
 
-    <
+    
     <!-- ##### Contact Area End ##### -->
 
     <!-- ##### Contact Information Area Start ##### -->
@@ -1019,10 +1008,57 @@
     <script src="js/plugins/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+
 <script>
+document.getElementById('downloadPortfolioBtn').addEventListener('click', async () => {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    const imageElements = document.querySelectorAll('#portfolio-chandu .single-portfolio-area img');
+
+    for (let i = 0; i < imageElements.length; i++) {
+        const img = imageElements[i];
+        const imgUrl = img.src;
+
+        try {
+            // Create canvas and draw the image
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+
+            const tempImg = new Image();
+            tempImg.crossOrigin = 'anonymous';
+            tempImg.src = imgUrl;
+
+            await new Promise((resolve, reject) => {
+                tempImg.onload = () => {
+                    // Set canvas size to image size
+                    canvas.width = tempImg.width;
+                    canvas.height = tempImg.height;
+                    context.drawImage(tempImg, 0, 0);
+                    resolve();
+                };
+                tempImg.onerror = reject;
+            });
+
+            const imgData = canvas.toDataURL('image/jpg', 1.0);
+
+            // Scale image to fit in PDF
+            const pdfWidth = doc.internal.pageSize.getWidth() - 30;
+            const scaleFactor = pdfWidth / tempImg.width;
+            const pdfHeight = tempImg.height * scaleFactor;
+
+            if (i !== 0) doc.addPage();
+            doc.addImage(imgData, 'JPEG', 15, 20, pdfWidth, pdfHeight);
+        } catch (error) {
+            console.error(`Error loading image ${imgUrl}`, error);
+        }
+    }
+
+    doc.save('portfolio.pdf');
+});
 </script>
 
 
@@ -1070,15 +1106,9 @@
 <!-- Add this JavaScript -->
 <script>
 
-$(document).ready(function() {
-    
-    testdata()
-});
- 
 
-function data() {
-    alert()
-}
+
+
  
 
 

@@ -534,13 +534,13 @@
                         <h5 class="wow fadeInUp gradient-text" data-wow-delay="100ms" ><strong>Hello, I'm</strong></h5>
                         <h2 class="wow fadeInUp gradient-text_name" data-wow-delay="300ms" ><strong>Divyam Jain</strong></h2><br>
                         
-                        <a class="wow fadeInUp gradient-text"><strong>Age: 2 Years</strong></a><br>
-                        <a class="wow  fadeInUp gradient-text"><strong>Height: 3'1" </strong></a><br>
-                        <a class="wow fadeInUp gradient-text"><strong>Weight: 30 lbs</strong></a><br>
-                        <a class="wow fadeInUp gradient-text"><strong>Hair: Black,  Eyes: Black</strong></a><br>
-                        <a class="wow fadeInUp gradient-text"><strong>Ethnicity: Indian American</strong></a><br>
-                        <a class="wow fadeInUp gradient-text"><strong>Clothing Size: 2T - 3T</strong></a><br>
-                        <a class="wow fadeInUp gradient-text"><strong>Shoe Size: 6-7 </strong></a>
+                        <a class=" gradient-text"><strong>Age: 2 Years</strong></a><br>
+                        <a class=" gradient-text"><strong>Height: 3'1" </strong></a><br>
+                        <a class=" gradient-text"><strong>Weight: 30 lbs</strong></a><br>
+                        <a class=" gradient-text"><strong>Hair: Black,  Eyes: Black</strong></a><br>
+                        <a class=" gradient-text"><strong>Ethnicity: Indian American</strong></a><br>
+                        <a class=" gradient-text"><strong>Clothing Size: 2T - 3T</strong></a><br>
+                        <a class=" gradient-text"><strong>Shoe Size: 6-7 </strong></a>
                         <div class="social-info mt-30">
                             <a href="#" title="Google Plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
                             <a href="#" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
@@ -549,6 +549,10 @@
                         </div>
                     </div>
                     
+
+
+
+
                 </div>
                 
                 <!-- Right side spherical image -->
@@ -784,9 +788,17 @@
                     </div>
                 </div>
             </div>
+       
 
         </div>
+       
     </div>
+
+    <div class="text-center mb-4">
+  <button id="downloadPortfolioraviBtn" class="btn btn-primary" style="color: #084bb7;">Download Portfolio</button>
+</div>
+
+    
 </section>
     <section class="portfolio-area section-padding-100 clearfix" id="portfolio-chandu">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -966,7 +978,7 @@
             
         </div>
         <div class="text-center mb-4">
-  <button id="downloadPortfolioBtn" class="btn btn-primary">Download Portfolio</button>
+  <button id="downloadPortfolioBtn" class="btn btn-primary" style="color: #084bb7;">Download Portfolio</button>
 </div>
 
     </section>
@@ -1099,6 +1111,54 @@ document.getElementById('downloadPortfolioBtn').addEventListener('click', async 
 
     doc.save('portfolio.pdf');
 });
+
+document.getElementById('downloadPortfolioraviBtn').addEventListener('click', async () => {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    const imageElements = document.querySelectorAll('#portfolio-ravi .single-portfolio-area img');
+
+    for (let i = 0; i < imageElements.length; i++) {
+        const img = imageElements[i];
+        const imgUrl = img.src;
+
+        try {
+            // Create canvas and draw the image
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+
+            const tempImg = new Image();
+            tempImg.crossOrigin = 'anonymous';
+            tempImg.src = imgUrl;
+
+            await new Promise((resolve, reject) => {
+                tempImg.onload = () => {
+                    // Set canvas size to image size
+                    canvas.width = tempImg.width;
+                    canvas.height = tempImg.height;
+                    context.drawImage(tempImg, 0, 0);
+                    resolve();
+                };
+                tempImg.onerror = reject;
+            });
+
+            const imgData = canvas.toDataURL('image/jpg', 1.0);
+
+            // Scale image to fit in PDF
+            const pdfWidth = doc.internal.pageSize.getWidth() - 30;
+            const scaleFactor = pdfWidth / tempImg.width;
+            const pdfHeight = tempImg.height * scaleFactor;
+
+            if (i !== 0) doc.addPage();
+            doc.addImage(imgData, 'JPEG', 15, 20, pdfWidth, pdfHeight);
+        } catch (error) {
+            console.error(`Error loading image ${imgUrl}`, error);
+        }
+    }
+
+    doc.save('portfolio.pdf');
+});
+
 </script>
 
 

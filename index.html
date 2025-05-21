@@ -173,6 +173,14 @@
         perspective: 1000px;
     }
 
+    .spherical-image-container-divyam {
+        position: relative;
+        width: 350px;
+        height: 250px;
+        perspective: 1000px;
+
+    }
+
     @media (max-width: 767px) {
         .spherical-image-container {
             margin-left: 70px;
@@ -204,11 +212,22 @@
     }
 
     .spherical-image {
-        width: 100%;
+        
         max-width: 300px;
-        height: auto;
+        height: 390px;
         display: block;
         margin: 0 auto;
+    }
+
+    @media (max-width: 767px) {
+        .spherical-image {
+        
+        max-width: 300px;
+        height: 390px;
+        display: block;
+        margin: 0 auto;
+        margin-left: 51px;
+    }
     }
 
     /* ===============================
@@ -297,6 +316,17 @@
     .single-portfolio-area img.loaded {
         opacity: 1;
     }
+
+    .mobile-breaks {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .mobile-breaks {
+    display: none;
+  }
+}
+
 </style>
 
 <body>
@@ -345,11 +375,11 @@
                                         <div class="d-flex h-100 gap-8">
                                             <div class="logoheader"
                                                 onclick="selectLogo('raviteja', this); document.querySelector('button[data-filter=\'*\']').click();">
-                                                <img src="img/bg-img/p11.jpg" alt="Raviteja Gatti">
+                                                <img src="img/bg-img/divyam.jpg" alt="Raviteja Gatti">
                                             </div>
                                             <div class="logoheader"
                                                 onclick="selectLogo('chandu', this); document.querySelector('button[data-filter=\'*\']').click();">
-                                                <img src="img/bg-img/r2.jpg" alt="Chandu Gatti">
+                                                <img src="img/bg-img/sarvam.jpg" alt="Chandu Gatti">
                                             </div>
                                         </div>
                                     </div>
@@ -377,14 +407,14 @@
 
                     <div class="logo"
                         onclick="showInfo('raviteja'); document.querySelector('button[data-filter=\'*\']').click();">
-                        <img src="img/bg-img/p11.jpg" alt="Raviteja Gatti">
+                        <img src="img/bg-img/divyam.jpg" alt="Raviteja Gatti">
                         <p style="color:#00296b">Divyam</p>
                     </div>
 
 
                     <div class="logo"
                         onclick="showInfo('chandu'); document.querySelector('button[data-filter=\'*\']').click();">
-                        <img src="img/bg-img/r2.jpg" alt="Chandu Gatti">
+                        <img src="img/bg-img/sarvam.jpg" alt="Chandu Gatti">
                         <p style="color:#00296b">Sarvam</p>
                     </div>
                 </div>
@@ -406,13 +436,13 @@
                             <h2 class="wow fadeInUp gradient-text_name" data-wow-delay="300ms" style="font-size: xx-large;"><strong>Divyam
                                     Jain</strong></h2><br>
 
-                            <a class=" gradient-text"><strong>Age: 2 Years</strong></a><br>
-                            <a class=" gradient-text"><strong>Height: 3'1" </strong></a><br>
-                            <a class=" gradient-text"><strong>Weight: 30 lbs</strong></a><br>
-                            <a class=" gradient-text"><strong>Hair: Black, Eyes: Black</strong></a><br>
-                            <a class=" gradient-text"><strong>Ethnicity: Indian American</strong></a><br>
-                            <a class=" gradient-text"><strong>Clothing Size: 2T - 3T</strong></a><br>
-                            <a class=" gradient-text"><strong>Shoe Size: 6-7 </strong></a>
+                            <h5 class=" gradient-text"><strong>Age: 2 Years</strong></h5>
+                            <h5 class=" gradient-text"><strong>Height: 3'1" </strong></h5>
+                            <h5 class=" gradient-text"><strong>Weight: 30 lbs</strong></h5>
+                            <h5 class=" gradient-text"><strong>Hair: Black, Eyes: Black</strong></h5>
+                            <h5 class=" gradient-text"><strong>Ethnicity: Indian American</strong></h5>
+                            <h5 class=" gradient-text"><strong>Clothing Size: 2T - 3T</strong></h5>
+                            <h5 class=" gradient-text"><strong>Shoe Size: 6-7 </strong></h5>
                             <div class="social-info mt-30">
                                 <a href="#" title="Google Plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
                                 <a href="#" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
@@ -427,15 +457,13 @@
 
                     <!-- Right side spherical image -->
                     <div class="col-12 col-md-6 col-lg-6">
-                        <div class="spherical-image-container wow fadeIn" data-wow-delay="500ms">
-                            <div class="spherical-image-wrapper">
-                                <img src="img/bg-img/p11.jpg" alt="Divyam Jain" class="img-fluid spherical-image">
+                        <div class=" wow fadeIn" data-wow-delay="500ms" style="width: 484px;">
+                            <div class="">
+                                <img src="img/bg-img/divyam.jpg" alt="Divyam Jain" class="img-fluid spherical-image">
                             </div>
                         </div>
                     </div>
                 </div>
-
-
 
             </div>
         </div>
@@ -452,12 +480,12 @@
                                 <strong>Hello I’m</h5>
                             <h2 class="wow fadeInUp gradient-text_name" data-wow-delay="300ms" style="font-size: xx-large;"><strong>Sarvam Jain</h2>
                             <br>
-                            <a class="wow fadeInUp gradient-text"><strong>Age: 6 Years</strong></a><br>
-                            <a class="wow fadeInUp gradient-text"><strong>Height: 4’1</strong></a><br>
-                            <a class="wow fadeInUp gradient-text"><strong> Weight: 40 lbs</strong></a><br>
-                            <a class="wow fadeInUp gradient-text"><strong>Hair: Black, Eyes: Black</strong></a><br>
-                            <a class="wow fadeInUp gradient-text"><strong>Ethnicity: Indian American</strong></a><br>
-                            <a class="wow fadeInUp gradient-text"><strong>Clothing Size: 5T, Shoe Size: 12</strong></a>
+                            <h5 class="wow fadeInUp gradient-text"><strong>Age: 6 Years</strong></h5>
+                            <h5 class="wow fadeInUp gradient-text"><strong>Height: 4’1</strong></h5>
+                            <h5 class="wow fadeInUp gradient-text"><strong> Weight: 40 lbs</strong></h5>
+                            <h5 class="wow fadeInUp gradient-text"><strong>Hair: Black, Eyes: Black</strong></h5>
+                            <h5 class="wow fadeInUp gradient-text"><strong>Ethnicity: Indian American</strong></h5>
+                            <h5 class="wow fadeInUp gradient-text"><strong>Clothing Size: 5T, Shoe Size: 12</strong></h5>
 
 
                             <div class="social-info mt-30 wow fadeIn" data-wow-delay="500ms">
@@ -471,9 +499,9 @@
 
                     <!-- Right side spherical image -->
                     <div class="col-12 col-md-6 col-lg-6">
-                        <div class="spherical-image-container wow fadeIn" data-wow-delay="500ms">
-                            <div class="spherical-image-wrapper">
-                                <img src="img/bg-img/r2.jpg" alt="Divyam Jain" class="img-fluid spherical-image">
+                        <div class=" wow fadeIn" data-wow-delay="500ms" >
+                            <div class="">
+                                <img src="img/bg-img/sarvam.jpg" alt="Divyam Jain" class="img-fluid spherical-image" style="margin-right: 138px;">
                             </div>
                         </div>
                     </div>
@@ -491,15 +519,18 @@
             <div class="row">
                 <!-- Section Heading -->
                 <div class="col-12 ">
-                    <div class="section-heading text-center mb-30" data-aos="fade-up" data-aos-delay="300">
+                    <div class="section-heading text-center mb-30 " data-aos="fade-up" data-aos-delay="300">
                         
-                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        <!-- <div class="mobile-breaks">
+                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        </div> -->
+
                         <div class="line mx-auto" data-aos="fade-right" data-aos-delay="400"></div>
                         <h2 class="gradient-text " data-aos="fade-up" data-aos-delay="500">Portfolio Showcase</h2>
                     </div>
                 </div>
 
-                <div class="col-12">
+                <div class="col-12" style="display: block;">
                     <div class="vcard-projects-menu" data-aos="fade-up" data-aos-delay="500">
                         <div class="text-center portfolio-menu">
                             <button class="btn active" style="visibility: hidden;" data-filter="*">Normal</button>
@@ -680,13 +711,15 @@
                 <div class="col-12">
                     <div class="section-heading text-center mb-30 wow fadeInUp" data-wow-delay="300ms">
                        
-                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        <!-- <div class="mobile-breaks">
+                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        </div> -->
                          <div class="line mx-auto"></div>
                         <h2 class="gradient-text">Portfolio Showcase</h2>
                     </div>
                 </div>
 
-                <div class="col-12">
+                <div class="col-12" style="display: block;">
                     <div class="vcard-projects-menu wow fadeInUp" data-wow-delay="500ms">
                         <div class="text-center portfolio-menu">
                             <button class="btn active" style="visibility: hidden;" data-filter="*">Digital
@@ -858,20 +891,29 @@
                         </div>
                         <div class="contact-text gradient-text">
                             <h6>Address:</h6>
-                            <p>Princeton, NJ</p>
+                            <p>
+                                <a href="https://www.google.com/maps?q=Princeton,+NJ" target="_blank" style="color: inherit; text-decoration: none;">
+                                    Princeton, NJ
+                                </a>
+                            </p>
                         </div>
                     </div>
 
+
                     <!-- Single Contact Information -->
                     <div class="single-contact-info d-flex align-items-center">
-                        <div class="contact-icon ">
+                        <div class="contact-icon">
                             <img src="img/core-img/phone-call.png.webp" alt="">
                         </div>
                         <div class="contact-text gradient-text">
                             <h6>Phone:</h6>
-                            <p>609-613-7893 or 609-592-8799</p>
+                            <p>
+                                <a href="tel:6096137893">609-613-7893</a> or
+                                <a href="tel:6095928799">609-592-8799</a>
+                            </p>
                         </div>
                     </div>
+
 
                     <!-- Single Contact Information -->
                     <div class="single-contact-info d-flex align-items-center">
@@ -880,9 +922,11 @@
                         </div>
                         <div class="contact-text gradient-text">
                             <h6>Email:</h6>
-                            <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
-                                    data-cfemail="542d3b212639353d38143339353d387a373b39"> jainsumith88@gmail.com /
-                                    apurvakothari04@gmail.com</a></p>
+                            <p><p>
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jainsumith88@gmail.com" target="_blank">jainsumith88@gmail.com</a> /
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=apurvakothari04@gmail.com" target="_blank">apurvakothari04@gmail.com</a>
+</p>
+</p>
                         </div>
                     </div>
                 </div>

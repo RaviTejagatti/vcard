@@ -328,6 +328,33 @@
   }
 }
 
+/* Apply break only for mobile devices (up to 767px) */
+@media (max-width: 767px) {
+    .mobile-break {
+        display: block;
+        margin-top: 30px;
+    }
+}
+
+/* Hide the break on larger screens */
+@media (min-width: 768px) {
+    .mobile-break {
+        display: none;
+    }
+}
+
+/* Hide elements with the 'hide-mobile' class on mobile (max-width: 767px) */
+@media (max-width: 767px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+.underlined {
+    text-decoration: underline;
+}
+
+
+
 </style>
 
 
@@ -382,7 +409,7 @@
                                             </div>
                                             <div class="logoheader"
                                                 onclick="selectLogo('chandu', this); document.querySelector('button[data-filter=\'*\']').click();">
-                                                <img src="img/bg-img/sar1.jpg" alt="Chandu Gatti">
+                                                <img src="img/bg-img/r17.jpg" alt="Chandu Gatti">
                                             </div>
                                         </div>
                                     </div>
@@ -417,7 +444,7 @@
 
                     <div class="logo"
                         onclick="showInfo('chandu'); document.querySelector('button[data-filter=\'*\']').click();">
-                        <img src="img/bg-img/sar1.jpg" alt="Chandu Gatti">
+                        <img src="img/bg-img/r17.jpg" alt="Chandu Gatti">
                         <p style="color:#00296b">Sarvam</p>
                     </div>
                 </div>
@@ -439,29 +466,27 @@
                             <h2 class="wow fadeInUp gradient-text_name" data-wow-delay="300ms" style="font-size: xx-large;"><strong>Divyam
                                     Jain</strong></h2><br>
 
-                            <h5 class=" gradient-text"><strong>Age: 2 Years</strong></h5>
-                            <h5 class=" gradient-text"><strong>DOB: Feb 2023</strong></h5>
-                            <h5 class=" gradient-text"><strong>Height: 3'1"</strong></h5>
-                            <h5 class=" gradient-text"><strong>Weight: 30 lbs</strong></h5>
-                            <h5 class=" gradient-text"><strong>Hair: Black</strong></h5>
-                            <h5 class=" gradient-text"><strong>Eyes: Black</strong></h5>
-                            <h5 class=" gradient-text"><strong>Clothing Size: 2T - 3T</strong></h5>
-                            <h5 class=" gradient-text"><strong>Shoe Size: 6-7 </strong></h5>
-                            <div class="social-info mt-30">
+                            <h5 class=" gradient-text"><strong>Age : 2 Years</strong></h5>
+                            <h5 class=" gradient-text"><strong>DOB : Feb 2023</strong></h5>
+                            <h5 class=" gradient-text"><strong>Height : 3'1"</strong></h5>
+                            <h5 class=" gradient-text"><strong>Weight : 30 lbs</strong></h5>
+                            <h5 class=" gradient-text"><strong>Hair : Black</strong></h5>
+                            <h5 class=" gradient-text"><strong>Eyes : Black</strong></h5>
+                            <h5 class=" gradient-text"><strong>Clothing Size : 2T - 3T</strong></h5>
+                            <h5 class=" gradient-text"><strong>Shoe Size : 6-7 </strong></h5>
+                            <div class="gradient-text_name" >
                                    <a href="https://www.instagram.com" title="Instagram" target="_blank">
-        <i style="font-size:24px" class="fa">&#xf16d;   @divyamjain108</i>
+        <i class="fa" style="font-size: xx-large;">&#xf16d;<strong>  @divyamjain108</strong> </i>
     </a>
     
     
-                                <!-- <a href="#" title="Google Plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                                <a href="#" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                                <a href="#" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                <a href="#" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a> -->
                             </div>
                             <div>
                                 <br>
-        <h5 class="gradient-text" onclick="window.open('img/bg-img/Divyam_Jain_Portfolio-1.pdf', '_blank')" style="cursor: pointer;">
-    Download Portfolio
+        <h5 class="gradient-text underlined"  style=" text-decoration: underline;" onclick="window.open('img/bg-img/Divyam_Jain_Portfolio-1.pdf', '_blank')" >
+    <i class="fa">&#xf019;<strong> Download Portfolio</strong> </i> 
+            
+   
 </h5>
 <h6>- Bursting with energy and loves the spotlight
 </h6>
@@ -479,8 +504,8 @@
 
                     </div>
 
-                    <!-- Right side spherical image -->
-                    <div class="col-12 col-md-6 col-lg-6">
+                    
+                    <div class="col-12 col-md-6 col-lg-6 hide-mobile">
                         <div class=" wow fadeIn" data-wow-delay="500ms" style="width: 484px;">
                             <div class="">
                                 <img src="img/bg-img/p6.jpg" alt="Divyam Jain" class="img-fluid spherical-image">
@@ -505,30 +530,26 @@
                             <h2 class="wow fadeInUp gradient-text_name" data-wow-delay="300ms" style="font-size: xx-large;"><strong>Sarvam Jain</h2>
                             <br>
                             <h5 class="wow fadeInUp gradient-text"><strong>Age: 6 Years</strong></h5>
-                            <h5 class=" gradient-text"><strong>DOB: june 2019</strong></h5>
-                            <h5 class="wow fadeInUp gradient-text"><strong>Height: 4’1</strong></h5>
-                            <h5 class="wow fadeInUp gradient-text"><strong> Weight: 40 lbs</strong></h5>
-                            <h5 class="wow fadeInUp gradient-text"><strong>Hair: Black</strong></h5>
-                            <h5 class="wow fadeInUp gradient-text"><strong>Eyes: Black</strong></h5>
-                            <h5 class="wow fadeInUp gradient-text"><strong>Clothing Size: 5T</strong></h5>
-                            <h5 class="wow fadeInUp gradient-text"><strong>Shoe Size: 12</strong></h5>
+                            <h5 class=" gradient-text"><strong>DOB: June 2019</strong></h5>
+                            <h5 class="wow fadeInUp gradient-text"><strong>Height : 4’1</strong></h5>
+                            <h5 class="wow fadeInUp gradient-text"><strong> Weight : 40 lbs</strong></h5>
+                            <h5 class="wow fadeInUp gradient-text"><strong>Hair : Black</strong></h5>
+                            <h5 class="wow fadeInUp gradient-text"><strong>Eyes : Black</strong></h5>
+                            <h5 class="wow fadeInUp gradient-text"><strong>Clothing Size : 5T</strong></h5>
+                            <h5 class="wow fadeInUp gradient-text"><strong>Shoe Size : 12</strong></h5>
                             
 
 
-                            <div class="social-info mt-30 wow fadeIn" data-wow-delay="500ms">
+                             <div class="gradient-text_name" >
                                 <a href="https://www.instagram.com" title="Instagram" target="_blank">
-        <i style="font-size:24px" class="fa">&#xf16d;   @sarvamjain</i>
+        <i style="font-size: xx-large;" class="fa">&#xf16d;   <strong>@sarvamjain</strong></i>
     </a>
                                  
-                                 <!-- <a href="#" title="Google Plus"><i class="fa-instagram" aria-hidden="true"></i></a>  -->
-                                <!-- <a href="#" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                                <a href="#" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                <a href="#" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>  -->
                             </div>
                             <div>
                                 <br>
         <h5 class="gradient-text" onclick="window.open('img/bg-img/Sarvam_Model_Portfolio.pdf', '_blank')" style="cursor: pointer;">
-    Download Portfolio
+    <i class="fa">&#xf019;<strong> Download Portfolio</strong> </i> 
 </h5>
 
 <h6>- Big expressive eyes + a heart-melting smile</h6>
@@ -546,13 +567,14 @@
                     </div>
 
                     <!-- Right side spherical image -->
-                    <div class="col-12 col-md-6 col-lg-6">
-                        <div class=" wow fadeIn" data-wow-delay="500ms" >
-                            <div class="">
-                                <img src="img/bg-img/sarvam.jpg" alt="Divyam Jain" class="img-fluid spherical-image" style="margin-right: 138px;">
-                            </div>
-                        </div>
-                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 hide-mobile">
+    <div class="wow fadeIn" data-wow-delay="500ms">
+        <div>
+            <img src="img/bg-img/r15.jpg" alt="Divyam Jain" class="img-fluid spherical-image" style="margin-right: 138px;">
+        </div>
+    </div>
+</div>
+
 
 
                 </div>
@@ -566,17 +588,16 @@
         <div class="container ">
             <div class="row">
                 <!-- Section Heading -->
-                <div class="col-12 ">
-                    <div class="section-heading text-center mb-30 " data-aos="fade-up" data-aos-delay="300">
-                        
-                        <!-- <div class="mobile-breaks">
-                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                        </div> -->
+                <div class="col-12">
+    <div class="section-heading text-center mb-30" data-aos="fade-up" data-aos-delay="300">
+        <br class="mobile-break">
+        <br class="mobile-break">
+        <br class="mobile-break">
+        
+        <h2 class="gradient-text" data-aos="fade-up" data-aos-delay="500">Portfolio Showcase</h2>
+    </div>
+</div>
 
-                        <!-- <div class="line mx-auto" data-aos="fade-right" data-aos-delay="400"></div> -->
-                        <h2 class="gradient-text " data-aos="fade-up" data-aos-delay="500">Portfolio Showcase</h2>
-                    </div>
-                </div>
 
                 <div class="col-12" style="display: block;">
                     <div class="vcard-projects-menu" data-aos="fade-up" data-aos-delay="500">
@@ -760,10 +781,9 @@
                 <div class="col-12">
                     <div class="section-heading text-center mb-30 wow fadeInUp" data-wow-delay="300ms">
                        
-                        <!-- <div class="mobile-breaks">
-                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                        </div> -->
-                         <!-- <div class="line mx-auto"></div> -->
+                        <br class="mobile-break">
+                        <br class="mobile-break">
+                        <br class="mobile-break">
                         <h2 class="gradient-text">Portfolio Showcase</h2>
                     </div>
                 </div>
@@ -788,21 +808,7 @@
         <div class="container-fluid">
             <div class="row vcard-portfolio">
 
-                <!-- Single gallery Item -->
-                <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area web brand wow fadeInUp" data-aos="fade-up"
-                    data-aos-delay="100">
-                    <img src="img/bg-img/r1.jpg" alt="">
-                    <!-- Content -->
-                    <div class="portfolio-content">
-                        <h5></h5>
-                        <a href="#" class="catagory"></a>
-                        <!-- Zoom View -->
-                        <div class="vcard-img-zoom">
-                            <a href="img/bg-img/r1.jpg" class="img-url"><i class="fa fa-search-plus"
-                                    aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
+                
 
                 <!-- Single gallery Item -->
                 <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area brand illustrations wow fadeInUp"
@@ -852,21 +858,7 @@
                     </div>
                 </div>
 
-                <!-- Single gallery Item -->
-                <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area brand motion wow fadeInUp" data-aos="fade-up"
-                    data-aos-delay="100">
-                    <img src="img/bg-img/r5.webp" alt="">
-                    <!-- Content -->
-                    <div class="portfolio-content">
-                        <h5></h5>
-                        <a href="#" class="catagory"></a>
-                        <!-- Zoom View -->
-                        <div class="vcard-img-zoom">
-                            <a href="img/bg-img/r5.webp" class="img-url"><i class="fa fa-search-plus"
-                                    aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
+                
 
                 <!-- Single gallery Item -->
                 <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area web motion wow fadeInUp" data-aos="fade-up"
@@ -884,21 +876,7 @@
                     </div>
                 </div>
 
-                <!-- Single gallery Item -->
-                <div class="col-12 col-sm-6 col-lg-3 single-portfolio-area illustrations motion wow fadeInUp"
-                    data-aos="fade-up" data-aos-delay="100">
-                    <img src="img/bg-img/r7.webp" alt="">
-                    <!-- Content -->
-                    <div class="portfolio-content">
-                        <h5></h5>
-                        <a href="#" class="catagory"></a>
-                        <!-- Zoom View -->
-                        <div class="vcard-img-zoom">
-                            <a href="img/bg-img/r7.webp" class="img-url"><i class="fa fa-search-plus"
-                                    aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
+                
 
                
 

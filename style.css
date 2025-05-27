@@ -130,7 +130,7 @@ img {
 
 /* Section Padding */
 .section-padding-100 {
-  padding-top: 100px;
+  padding-top: 10px;
   padding-bottom: 100px; }
 
 .section-padding-100-0 {
@@ -609,7 +609,7 @@ textarea:focus {
 .vcard-projects-menu {
   position: relative;
   z-index: 1;
-  margin-bottom: 90px; }
+  }
   .vcard-projects-menu .portfolio-menu button {
     font-size: 16px;
     padding: 0 20px;
